@@ -31,15 +31,28 @@ func main() {
 	l := s[2:5] // from index 2 to (but excluding) s[5]
 	fmt.Println("sl1: ", l)
 
-	l = s[:4] //equivalen to s[0:4]
+	l = s[:4] //equivalent to s[0:4]
 	fmt.Println("sl2 : ", l)
 
-	l = s[2:] // equivalen to s[2:5]
+	l = s[2:] // equivalent to s[2:5]
 	fmt.Println("sl3 : ", l)
 
 	t := []string{"g", "h", "i"}
 	fmt.Println("dcl", t)
-	//t.append(t, "prangan")
-	fmt.Println("updated t  : ", t)
+
+	twoD := make([][]int, 3)  // initialize with row
+	for i:=0; i<3; i++{
+		innerLen := i+1
+		twoD[i] = make([]int, innerLen) // redeclaration twoD
+		for j:=0; j<innerLen ; j++{
+			twoD[i][j] = i+j
+		}
+	}
+	printTwoD(twoD)
 
 }
+
+func  printTwoD(sl[][] int )  {
+	fmt.Println(sl)
+}
+
