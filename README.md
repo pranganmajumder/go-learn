@@ -28,3 +28,7 @@ Install anyone you prefer most.
 
 ### Start to Learn Go
 * [An Introduction to Programming in GO](https://www.golang-book.com/books/intro)
+
+### Other Helpful Site
+* [golangbot](https://golangbot.com/learn-golang-series/)
+* [gobyexample](https://gobyexample.com/)
