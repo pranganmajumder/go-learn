@@ -37,7 +37,7 @@ func main() {
 	l = s[2:] // equivalent to s[2:5]
 	fmt.Println("sl3 : ", l)
 
-	t := []string{"g", "h", "i"}
+	t := []string{"g", "h", "i"}  // short hand declaration to create an array
 	fmt.Println("dcl", t)
 
 	twoD := make([][]int, 3)  // initialize with row
