@@ -25,8 +25,27 @@ func main() {
 		4,
 		5,
 	}
-
 	secondWay(array3)
+
+	// two dimensional array
+	var twoD [3][5]int // row , column
+	fmt.Println("Enter your input for two dimensional array 3 row , 5 column")
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 5; j++ {
+			fmt.Scanf("%d", &twoD[i][j])
+		}
+	}
+	printTwoDArray(twoD)
+}
+
+func printTwoDArray(twoD [3][5]int) {
+	fmt.Println("Printing Two dimentional array")
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 5; j++ {
+			fmt.Print(twoD[i][j], " ")
+		}
+		fmt.Println()
+	}
 }
 
 func firstWay(array [5]int) {
