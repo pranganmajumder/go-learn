@@ -36,6 +36,12 @@ func main() {
 		}
 	}
 	printTwoDArray(twoD)
+
+	//another way of creating array
+	ar1 := [3]int{12} // declares an array of len 3 output [12, 0, 0]
+	ar2 := [...]int{12, 78, 50}
+	fmt.Println(ar1)      // 12, 0 , 0
+	fmt.Println(len(ar2)) // 3
 }
 
 func printTwoDArray(twoD [3][5]int) {
