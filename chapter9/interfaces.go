@@ -27,6 +27,10 @@ func (r rect) area() float32  { // dont use pointer
 	return r.height * r.weidth
 }
 
+func getArea(s shape) float32 {
+	return s.area()
+}
+
 func main()  {
 	c1 := circle{4.5}
 	r1 := rect{5,7}
@@ -40,7 +44,10 @@ func main()  {
 		fmt.Println(shape.area())
 	}
 
-
-
+	//this can be done using following way using getArea function
+	fmt.Println("another way")
+	for _,shape := range shapes{
+		fmt.Println(getArea(shape))
+	}
 
 }
