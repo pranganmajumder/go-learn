@@ -19,11 +19,11 @@ type shape interface {
 	//pow() float32
 }
 
-func (c circle) area() float32 { // dont use pointer c * circle
+func (c *circle) area() float32 { // if user pointer send parameter as a reference from called function
 	return math.Pi * c.radius * c.radius
 }
 
-func (r rect) area() float32  { // dont use pointer
+func (r *rect) area() float32  {
 	return r.height * r.weidth
 }
 
@@ -38,7 +38,7 @@ func main()  {
 	//fmt.Println("circle area  " , c1.area())
 	//fmt.Println("rectangle area " , r1.area())
 
-	shapes := []shape {c1 , r1}
+	shapes := []shape {&c1 , &r1}
 
 	for _, shape := range shapes{
 		fmt.Println(shape.area())
