@@ -47,7 +47,9 @@ func main() {
 		arr := []byte("abd")
 		fmt.Println(arr)
 
+		// "test"
 		str1 := string([]byte{'t' , 'e' , 's' , 't'})
+		// "abc"
 		str2 := string([]byte{97, 98 , 99})
 		fmt.Println(str1 , str2)
 
