@@ -37,22 +37,33 @@ func main() {
 	l = s[2:] // equivalent to s[2:5]
 	fmt.Println("sl3 : ", l)
 
-	t := []string{"g", "h", "i"}  // short hand declaration to create an array
+	t := []string{"g", "h", "i"} // short hand declaration to create an array
 	fmt.Println("dcl", t)
 
-	twoD := make([][]int, 3)  // initialize with row
-	for i:=0; i<3; i++{
-		innerLen := i+1
+	twoD := make([][]int, 3) // initialize with row
+	for i := 0; i < 3; i++ {
+		innerLen := i + 1
 		twoD[i] = make([]int, innerLen) // redeclaration twoD
-		for j:=0; j<innerLen ; j++{
-			twoD[i][j] = i+j
+		for j := 0; j < innerLen; j++ {
+			twoD[i][j] = i + j
 		}
 	}
 	printTwoD(twoD)
+	anotherPrint(twoD...)
 
 }
 
-func  printTwoD(sl[][] int )  {
+func printTwoD(sl [][]int) {
 	fmt.Println(sl)
 }
 
+func anotherPrint(sl ...[]int) {
+	fmt.Println("slice printing")
+	//fmt.Println(sl)
+	for i := 0; i < len(sl); i++ {
+		for j := 0; j < len(sl[i]); j++ {
+			fmt.Print(sl[i][j], " ")
+		}
+		fmt.Println()
+	}
+}
