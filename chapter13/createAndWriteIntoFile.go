@@ -14,5 +14,4 @@ func main() {
 	file.WriteString("this is our newly created file test2.txt")
 
 
-
 }

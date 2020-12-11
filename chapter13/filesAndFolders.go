@@ -36,6 +36,6 @@ func main()  {
 		return
 	}
 
-	str := string( bs)
+	str := string(bs)
 	fmt.Println("the data of the file : ", str)
 }
