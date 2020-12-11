@@ -20,7 +20,7 @@ func calsSquares(number int, sq chan int)  {
 		number /= 10
 		sum += rem * rem
 	}
-	sq <- sum
+	sq <- sum     // write data to channel sq
 }
 
 func calcCubes(number int , cu chan  int) {
@@ -30,18 +30,18 @@ func calcCubes(number int , cu chan  int) {
 		number /= 10
 		sum += rem * rem * rem
 	}
-	cu <- sum
+	cu <- sum   // write data to channel cu
 }
 
 func main() {
 	number := 589
-	sq := make(chan  int)
+	sq := make(chan  int)   // create a channel of type int
 	cu := make(chan int)
 
 	go calsSquares(number , sq)
 	go calcCubes(number , cu)
 
-	sqares , cube := <- sq , <- cu
+	sqares , cube := <- sq , <- cu     // read data from channel sq , cu and store into sqares , cube
 	fmt.Println("Final Output   " , sqares + cube)
 }
 // problem link
