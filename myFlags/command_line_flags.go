@@ -11,6 +11,7 @@ func main() {
 	numbPtr := flag.Int("numb" , 42 , "an integer")
 	boolPtr := flag.Bool("fork" , false , "a bool")
 
+	// create custom flag
 	var svarr string
 	flag.StringVar(&svarr , "svar" , "bar" , "a string var")
 
