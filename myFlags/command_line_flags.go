@@ -1,3 +1,5 @@
+// according to https://gobyexample.com/command-line-flags
+
 package main
 
 import (
