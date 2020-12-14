@@ -7,3 +7,6 @@
    ```bash
    $ ./binaryfile -h
    ```
+ * See the console output run the following
+   
+   ``` $ ./binaryfile ```
