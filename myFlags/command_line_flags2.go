@@ -27,5 +27,13 @@ func main() {
 
 	fmt.Println("ip : ",*ip)
 	fmt.Println("flagvar : " , flagvar)
+
+	var ip2 = flag.IntP("ip2Flagname", "f" , 1234 , "helper messege for ip2")
+	var flagvar2 bool
+	func (){
+		flag.BoolVarP(&flagvar2 , "boolname", "b", true , "help message")
+	}()
+	var flagVal string
+	flag.VarP(&flagVal, "varname" , "v" , "help message")
 }
 
