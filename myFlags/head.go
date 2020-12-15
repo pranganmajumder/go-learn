@@ -14,7 +14,7 @@ import (
 
 func main() {
 	var count int
-	flag.IntVar(&count , "n", 5 , "number of lines to read from the file")
+	flag.IntVar(&count , "n", 5 , "number of lines to read from the file") // value = number of lines want to display
 	flag.Parse()
 
 	var in io.Reader
