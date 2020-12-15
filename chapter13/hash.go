@@ -17,7 +17,7 @@ func getHash(filename string) (uint32, error) {
 }
 
 func main() {
-	h1, err := getHash("test.txt")
+	h1, err := getHash("test1.txt")
 	if err != nil {
 		return
 	}
