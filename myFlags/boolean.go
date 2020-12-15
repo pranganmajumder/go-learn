@@ -1,3 +1,6 @@
+// resources : https://www.digitalocean.com/community/tutorials/how-to-use-the-flag-package-in-go
+
+
 package main
 
 import (
@@ -17,7 +20,7 @@ const (
 )
 
 func colorize(color Color , message string)  {
-	fmt.Println(string(color) , message , string(ColorReset))
+	fmt.Println(string(color) , message,  string(ColorReset))
 }
 
 func main() {
@@ -25,7 +28,8 @@ func main() {
 	flag.Parse()
 	
 	if *useColor{
-		colorize(ColorBlue , "Hello , DigitalOcean!")
+		colorize(ColorYellow , "Hello , DigitalOcean!")  // change color as your wish
+		return
 	}
 	fmt.Println("Hello, DigitalOcean!")
 }
