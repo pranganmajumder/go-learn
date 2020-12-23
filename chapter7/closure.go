@@ -40,3 +40,5 @@ func main() {
 	fmt.Println(b("!"))
 
 }
+
+// closure more example : https://www.calhoun.io/5-useful-ways-to-use-closures-in-go/
